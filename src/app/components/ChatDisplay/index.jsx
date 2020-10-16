@@ -5,35 +5,41 @@ import { useEffect } from 'react';
 import { useChatbot } from '../../services';
 
 export default () => {
-	const [inputValue, setInputValue] = useState('');
-	// {message, isUser} message = text/html
+    // De inputwaarde van de gebruiker
+    const [inputValue, setInputValue] = useState('');
+    // Alle berichten die in het chatvenster komen
 	const [messages, setMessages] = useState([]);
+    // De referentie naar het chatvenster
 	const chatDisplayRef = useRef(null);
+    // Functionaliteit van de chatbot
 	const { reply: botReply, setAddToDisplay, botReady } = useChatbot();
 
+    // Wanneer de chatbot wel/niet geïnitialiseerd wordt:
 	useEffect(() => {
-		if (!botReady) return;
+        // Voer volgende code niet uit als de bot niet geïnitialiseerd is
+        if (!botReady) return;
+
+        // Link de 'addToDisplay' functie in aan de chatbot service (store)
 		setAddToDisplay({ callback: addToDisplay });
-		addToDisplay(
-			<>
-				<button className="chatButton" onClick={() => sayAsUser('temperatuur')}>Temperatuur</button>
-				<button className="chatButton" onClick={() => sayAsUser('wind')}>Wind</button>
-				<button className="chatButton" onClick={() => sayAsUser('regen')}>Regen</button>
-			</>
-		);
 	}, [botReady]);
 
+    // Wanneer er bericht bijkomen:
 	useEffect(() => {
+        // Voer volgende code niet uit als het chatvenster nog niet bestaat is
 		if (!chatDisplayRef.current) return;
 
+        // Scroll naar beneden (naar het nieuwste bericht)
 		chatDisplayRef.current.scrollTo({
 			top: chatDisplayRef.current.scrollHeight,
 		});
 	}, [messages]);
 
-	// message = text/html
+	// Voeg een bericht toe aan het chatvenster
 	function addToDisplay(message, isUser = false) {
-		if (message === '') return;
+        // Voer volgende code niet uit als het bericht een lege string is
+        if (message === '') return;
+        
+        // Voeg een bericht toe aan de 'messages'-state
 		setMessages((prev) => [
 			...prev,
 			{
@@ -45,18 +51,20 @@ export default () => {
 
 	// Verstuur het bericht
 	async function send() {
-		// Stop de functie als er geen input is
+		// Voer volgende code niet uit als er geen input is
 		if (inputValue.trim().length < 1) {
 			setInputValue('');
 			return;
 		}
 
+		// Voer volgende code niet uit als er geen input is
 		sayAsUser(inputValue);
 
-		// chatInput.value = '';
+		// Reset de input in het de 'inputValue' state (en dus ook het inputveld)
 		setInputValue('');
 	}
 
+	// Verstuur een bericht in naam van de gebruiker
 	async function sayAsUser(message) {
 		// Voeg het bericht toe aan het chatvenster
 		addToDisplay(message.trim(), true);
