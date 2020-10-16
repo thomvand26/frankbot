@@ -1,8 +1,8 @@
 import React from 'react';
 import './app.scss';
-import ChatDisplay from './components/ChatDisplay';
 
 import Frank from './assets/frank-deboosere.jpg';
+import { ChatDisplay } from './components';
 
 function App() {
 	return (
