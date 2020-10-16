@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/frankbot/static/css/main.bdc68d56.chunk.css",
+    "main.js": "/frankbot/static/js/main.bedaf50d.chunk.js",
+    "main.js.map": "/frankbot/static/js/main.bedaf50d.chunk.js.map",
+    "runtime-main.js": "/frankbot/static/js/runtime-main.ef5e0a7b.js",
+    "runtime-main.js.map": "/frankbot/static/js/runtime-main.ef5e0a7b.js.map",
+    "static/js/2.f4cd006f.chunk.js": "/frankbot/static/js/2.f4cd006f.chunk.js",
+    "static/js/2.f4cd006f.chunk.js.map": "/frankbot/static/js/2.f4cd006f.chunk.js.map",
+    "index.html": "/frankbot/index.html",
+    "precache-manifest.e4fb39ae510a9cf59281819afe952fa5.js": "/frankbot/precache-manifest.e4fb39ae510a9cf59281819afe952fa5.js",
+    "service-worker.js": "/frankbot/service-worker.js",
+    "static/css/main.bdc68d56.chunk.css.map": "/frankbot/static/css/main.bdc68d56.chunk.css.map",
+    "static/js/2.f4cd006f.chunk.js.LICENSE.txt": "/frankbot/static/js/2.f4cd006f.chunk.js.LICENSE.txt",
+    "static/media/brain.rive": "/frankbot/static/media/brain.68699961.rive",
+    "static/media/frank-deboosere.jpg": "/frankbot/static/media/frank-deboosere.4795c658.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ef5e0a7b.js",
+    "static/js/2.f4cd006f.chunk.js",
+    "static/css/main.bdc68d56.chunk.css",
+    "static/js/main.bedaf50d.chunk.js"
+  ]
+}

@@ -1,0 +1,61 @@
+! version = 2.0
+
+
+// Substitutions
+
+! sub temp      = temperatuur
+! sub dag       = hallo
+! sub salut     = doei
+! sub tot later     = doei
+! sub tot ziens     = doei
+! sub totziens      = doei
+! sub fijne dag nog       = doei
+
+
+// Triggers en antwoorden
+
++ (hallo|*hallo|hallo*|*hallo*){weight=1}
+- Hallo! Probeer zoektermen met daarin weer, 'temperatuur', 'wind' of 'regen' om meer te weten te komen over het weer op dit moment.
+
++ * in *{weight=10}
+- <set location=<star2>>Wil je het weer in <get location> weten?
+
++ ja
+% (in *|* in *)
+- <call>getWeather <get location></call>
+
++ nee
+% (in *|* in *)
+- Ok.
+
++ (weer|*weer|weer*|*weer*){weight=9}
+- <call>getWeather <get location></call>
+
++ (temperatuur|*temperatuur|temperatuur*|*temperatuur*)
+- <call>getWeather <get location> temperatuur</call>
+
++ (graden|*graden|graden*|*graden*)
+- <call>getWeather <get location> temperatuur</call>
+
++ (warm|*warm|warm*|*warm*)
+- <call>getWeather <get location> temperatuur</call>
+
++ (koud|*koud|koud*|*koud*)
+- <call>getWeather <get location> temperatuur</call>
+
++ (wind|*wind|wind*|*wind*)
+- <call>getWeather <get location> wind</call>
+
++ (waaien|*waaien|waaien*|*waaien*)
+- <call>getWeather <get location> wind</call>
+
++ (regen|*regen|regen*|*regen*)
+- <call>getWeather <get location> regen</call>
+
++ (doei|*doei|doei*|*doei*)
+- Tot later! Hopelijk zie ik je snel weer, met meer weer!
+
++ *
+- Dat heb ik niet begrepen...
+- Oei, dat heb ik niet verstaan...
+- Vraag me iets over het weer.
