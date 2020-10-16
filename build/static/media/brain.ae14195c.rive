@@ -1,0 +1,33 @@
+! version = 2.0
+
+// Substitutions
+! sub temp      = temperatuur
+
++ hallo chatbot
+- Hallo gebruiker!
+
++ * in *{weight=10}
+- <set location=<star2>>Wil je het weer in <get location> weten?
+
++ ja
+% (in *|* in *)
+- <call>getWeather <get location></call>
+
++ nee
+% (in *|* in *)
+- Ok.
+
++ (weer|*weer|weer*|*weer*){weight=9}
+- <call>getWeather <get location></call>
+
++ (temperatuur|*temperatuur|temperatuur*|*temperatuur*)
+- <call>getWeather <get location> temperatuur</call>
+
++ (wind|*wind|wind*|*wind*)
+- <call>getWeather <get location> wind</call>
+
++ (regen|*regen|regen*|*regen*)
+- <call>getWeather <get location> regen</call>
+
++ *
+- Dat heb ik niet begrepen...

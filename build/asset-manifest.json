@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.89df7769.chunk.css",
+    "main.js": "/static/js/main.6cc27828.chunk.js",
+    "main.js.map": "/static/js/main.6cc27828.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.5369b4e5.js",
+    "runtime-main.js.map": "/static/js/runtime-main.5369b4e5.js.map",
+    "static/js/2.ee1c7a8b.chunk.js": "/static/js/2.ee1c7a8b.chunk.js",
+    "static/js/2.ee1c7a8b.chunk.js.map": "/static/js/2.ee1c7a8b.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.d5a45748f6a2e70f169967cff466cbeb.js": "/precache-manifest.d5a45748f6a2e70f169967cff466cbeb.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.89df7769.chunk.css.map": "/static/css/main.89df7769.chunk.css.map",
+    "static/js/2.ee1c7a8b.chunk.js.LICENSE.txt": "/static/js/2.ee1c7a8b.chunk.js.LICENSE.txt",
+    "static/media/brain.rive": "/static/media/brain.ae14195c.rive",
+    "static/media/frank-deboosere.jpg": "/static/media/frank-deboosere.4795c658.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5369b4e5.js",
+    "static/js/2.ee1c7a8b.chunk.js",
+    "static/css/main.89df7769.chunk.css",
+    "static/js/main.6cc27828.chunk.js"
+  ]
+}
