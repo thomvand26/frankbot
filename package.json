@@ -16,7 +16,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "deploy": "yarn build && cd ./build && git add . && git commit -m 'deploy' || git push -f https://github.com/thomvand26/frankbot.git master:gh-pages"
+    "deploy": "yarn build && cd ./build && git init && git add . && git commit -m 'deploy' && git push -f https://github.com/thomvand26/frankbot.git master:gh-pages"
   },
   "eslintConfig": {
     "extends": "react-app"
