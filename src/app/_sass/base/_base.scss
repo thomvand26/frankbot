@@ -1,0 +1,65 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body {
+    background-color: $color-primary;
+}
+
+button {
+    border-radius: $radius-default;
+    border: none;
+    padding: 0.5rem;
+    font-weight: 500;
+    background-color: $color-primary-dark;
+    color: $color-primary-lightest;
+    cursor: pointer;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    
+    & .inner {
+        width: 100%;
+        max-width: calc(100% - (#{$layout-side-width} * 2));
+        margin: 0 auto;
+    }
+}
+
+.fullHeight {
+    height: 100%;
+}
+
+.app {
+    height: 100%;
+    max-height: 100vh;
+    padding: 1rem 0;
+    box-sizing: border-box;
+}
+
+.appHeader {
+    margin-bottom: 10px;
+    & .inner {
+        max-height: 80px;
+        display: flex;
+
+        & img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: $radius-default;
+            margin-right: 10px;
+        }
+    }
+}
+
+#root {
+    height: 100%;
+}
